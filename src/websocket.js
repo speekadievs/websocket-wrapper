@@ -9,7 +9,7 @@
  * - ping: Enable/Disable ping-pong - default: true
  * - reconnect: Enable/Disable reconnection (ignored in silentClose()) - default: true
  * - debug: Enable/Disable debug messages - default: true
- * - share_connection: Enable/Disable connection sharing - default: true, will be set to false if the browser doesn't support LocalStorage API
+ * - share_connection: Enable/Disable connection sharing - default: false, will be set to false if the browser doesn't support LocalStorage API
  * - preventables: Prevent some events to be executed on child connections - default: []
  *
  * Methods
@@ -58,7 +58,7 @@
         this.ping = typeof options.ping !== 'undefined' ? options.ping : true;
         this.reconnect  = typeof options.reconnect !== 'undefined' ? options.reconnect : true;
         this.debug = typeof options.debug !== 'undefined' ? options.debug : true;
-        this.share_connection = typeof options.share_connection !== 'undefined' ? options.share_connection : true;
+        this.share_connection = typeof options.share_connection !== 'undefined' ? options.share_connection : false;
         this.preventables = typeof options.preventables !== 'undefined' ? options.preventables : [];
 
         if(!localStorageSupported()){
