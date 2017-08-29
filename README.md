@@ -1,7 +1,7 @@
- #WebSocket API wrapper
- ##With built in reconnection/ping-pong/connection sharing (experimental)
+ # WebSocket API wrapper #
+ ## With built in reconnection/ping-pong/connection sharing (experimental) ##
  
- ###Options
+ ### Options ###
  - **id**: Used to separate multiple different connections - default: 'Socket'
  - **autoconnect**: Enable/Disable auto connection. If disabled, the connect() method must be called separately
  - **ping**: Enable/Disable ping-pong - default: true
@@ -11,7 +11,7 @@
  _This feature is experimental and should not be used in production_
  - **preventables**: Prevent some events to be executed on child connections - default: []
  
- ###Methods
+ ### Methods ###
  - **connect()**: Connects to the WebSocket server if the connection doesn't already exist
  - **emit(action, payload)**: Sends an action to the WebSocket server
  - **on(event, callback)**: Adds a listener for a specific event
